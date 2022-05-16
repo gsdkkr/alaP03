@@ -1,0 +1,439 @@
+@font-face {
+  font-family: "Fonarto";
+  src: url("../font/Fonarto\ XT.ttf");
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #fbe6b5;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #fbe6b5;
+}
+::-webkit-scrollbar-thumb {
+  background: #8b101af1;
+  border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff182bf1;
+}
+
+.field__input {
+  --uiFieldPlaceholderColor: var(--fieldPlaceholderColor, #767676);
+
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: inherit;
+}
+
+.field__input:focus::-webkit-input-placeholder {
+  color: var(--uiFieldPlaceholderColor);
+}
+
+.field__input:focus::-moz-placeholder {
+  color: var(--uiFieldPlaceholderColor);
+}
+
+.topLogo img {
+  width: 15vw;
+  height: 12.5vw;
+  margin-left: 5vw;
+  margin-top: 2.5vw;
+}
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-family: "Montserrat", sans-serif;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  font-size: 60px;
+  margin-top: -3vh;
+  transition: all 0.3s;
+}
+.closebtn:hover {
+  transform: rotate(360deg);
+}
+.openbtn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 60px;
+  transition: all 0.3s;
+}
+.openbtn:hover {
+  transform: rotate(360deg);
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.news {
+  font-family: "Montserrat", sans-serif;
+}
+.news h1 {
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 900;
+}
+.news p {
+  font-weight: 500;
+  text-align: center;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-top: 0.5vh;
+  margin-bottom: 2vh;
+}
+.newsCard {
+  background-color: #cfb67c;
+  height: 55vh;
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 5vh;
+  border-radius: 15px;
+}
+.newsPicture img {
+  height: 25vh;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+  border-radius: 15px;
+}
+.newsTitle h1 {
+  text-transform: uppercase;
+  font-size: 25px;
+  text-align: center;
+  font-weight: 900;
+  margin-top: 2.5vh;
+}
+.newsButton {
+  background-color: #8b101af1;
+  padding: 2vh 0 2vh 0;
+  width: 175px;
+  border-radius: 15px;
+  margin-left: 25%;
+  margin-top: 5vh;
+  transition: all 0.3s;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  font-size: 17.5px;
+  transition: transform 0.3s;
+  border: none;
+}
+.newsButton:hover {
+  transform: translateY(-5px);
+}
+
+.dividerline4 {
+  position: absolute;
+  height: 0.5vh;
+  width: 70%;
+  margin-left: 15%;
+  background-color: #997e30;
+  top: 267.5vh;
+  border-radius: 25px;
+}
+
+.footer {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: #edaa49;
+  color: white;
+  text-align: center;
+  font-weight: 900;
+  top: 270vh;
+}
+.footer p {
+  margin-top: 7.5%;
+}
+
+.field {
+  --uiFieldBorderWidth: var(--fieldBorderWidth, 2px);
+  --uiFieldPaddingRight: var(--fieldPaddingRight, 1rem);
+  --uiFieldPaddingLeft: var(--fieldPaddingLeft, 1rem);
+  --uiFieldBorderColorActive: var(
+    --fieldBorderColorActive,
+    rgba(22, 22, 22, 1)
+  );
+
+  display: var(--fieldDisplay, inline-flex);
+  position: absolute;
+  font-size: var(--fieldFontSize, 1rem);
+}
+
+.field__input {
+  box-sizing: border-box;
+  width: var(--fieldWidth, 125%);
+  height: var(--fieldHeight, 3rem);
+  padding: var(--fieldPaddingTop, 1.25rem) var(--uiFieldPaddingRight)
+    var(--fieldPaddingBottom, 0.5rem) var(--uiFieldPaddingLeft);
+  border-bottom: var(--uiFieldBorderWidth) solid
+    var(--fieldBorderColor, rgba(0, 0, 0, 0.25));
+}
+
+.field__input:focus {
+  outline: none;
+}
+
+.field__input::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.field__input::-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.field__input:focus::-webkit-input-placeholder {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+.field__input:focus::-moz-placeholder {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+
+.field__label-wrap {
+  box-sizing: border-box;
+  pointer-events: none;
+  cursor: text;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.field__label-wrap::after {
+  content: "";
+  box-sizing: border-box;
+  width: 125%;
+  height: 0;
+  opacity: 0;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.field__input:focus ~ .field__label-wrap::after {
+  opacity: 1;
+}
+
+.field__label {
+  position: absolute;
+  left: var(--uiFieldPaddingLeft);
+  top: calc(50% - 0.5em);
+
+  line-height: 1;
+  font-size: var(--fieldHintFontSize, inherit);
+
+  transition: top 0.2s cubic-bezier(0.9, -0.15, 0.1, 1.15),
+    opacity 0.2s ease-out, font-size 0.2s ease-out;
+  will-change: bottom, opacity, font-size;
+  font-family: "Montserrat", sans-serif;
+}
+
+.field__input:focus ~ .field__label-wrap .field__label,
+.field__input:not(:placeholder-shown) ~ .field__label-wrap .field__label {
+  --fieldHintFontSize: var(--fieldHintFontSizeFocused, 0.75rem);
+
+  top: var(--fieldHintTopHover, 0.25rem);
+}
+
+.field_v3 .field__label-wrap::after {
+  border: var(--uiFieldBorderWidth) solid var(--uiFieldBorderColorActive);
+  will-change: opacity, height;
+  transition: height 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.field_v3 .field__input:focus ~ .field__label-wrap::after {
+  height: 100%;
+}
+
+.new_field_response_3 {margin-top: 2.5vh; margin-left: 27.5vw}
+
+@media screen and (min-width: 800px) {
+  html {
+    height: 350vh;
+  }
+  .topLogo img {
+    width: 10vw;
+    height: 7.5vw;
+    margin-left: 1vw;
+    margin-top: 1vw;
+  }
+  .news {
+    margin-top: 5vh;
+    font-family: "Montserrat", sans-serif;
+  }
+  .news h1 {
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 900;
+  }
+  .news p {
+    font-weight: 500;
+    text-align: center;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 0.5vh;
+    margin-bottom: 2vh;
+    font-size: 12px;
+  }
+  .newsCard {
+    background-color: #cfb67c;
+    height: 100vh;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 15px;
+  }
+  .newsPicture img {
+    height: 55vh;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+    border-radius: 15px;
+  }
+  .newsTitle h1 {
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 900;
+    margin-top: 2.5vh;
+  }
+  .newsSummary p {
+    font-weight: 500;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2.5vh;
+  }
+  .newsButton {
+    background-color: #8b101af1;
+    padding: 2vh 0 2vh 0;
+    width: 175px;
+    border-radius: 15px;
+    margin-left: 40%;
+    margin-top: 10vh;
+    transition: all 0.3s;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    font-size: 17.5px;
+    transition: transform 0.3s;
+    border: none;
+  }
+  .newsButton:hover {
+    transform: translateY(-5px);
+    cursor: pointer;
+  }
+  .dividerline4 {
+    position: absolute;
+    height: 0.5vh;
+    width: 70%;
+    margin-left: 15%;
+    background-color: #997e30;
+    top: 470vh;
+    border-radius: 25px;
+  }
+  
+  .footer {
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 15vh;
+    background-color: #edaa49;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    top: 475vh;
+  }
+  .footer p {
+    margin-top: 2%;
+  }
+
+  .new_field_response_3 {margin-top: .5vh; margin-left: 17.5vw}
+}
